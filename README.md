@@ -166,4 +166,4 @@ jupyter notebook customer_segmentation.ipynb
 
 - Went from "everyone gets the same marketing" to **4 distinct, data-backed customer segments**
 - Found the segment worth prioritizing (Cluster 3) — high spenders who actually respond to campaigns
-- Noticed a pattern that's easy to miss otherwise: some customers browse a lot without buying, while others barely browse and just buy — that's a genuinely useful thing to know when deciding where to spend marketing effort.
+- Noticed a pattern that's easy to miss otherwise: some customers browse a lot without buying, while others barely browse and just buy — that's a genuinely useful thing to know when deciding where to spend marketing effort
