@@ -4,7 +4,7 @@ SmartCart is an e-commerce platform with a growing customer base — and right n
 
 ---
 
-## 📌 The Problem
+##  The Problem
 
 SmartCart has collected data on **2,240 customers**, covering **22 attributes** — demographics, how much people spend, how they shop (web, catalog, in-store), and whether they respond to campaigns.
 
@@ -20,7 +20,7 @@ Use unsupervised machine learning to group SmartCart's customers into a handful 
 
 ---
 
-## 📊 The Data
+##  The Data
 
 Each row is one customer. Here's what's in there:
 
@@ -63,7 +63,7 @@ Each row is one customer. Here's what's in there:
 
 ---
 
-## 🛠️ What I used
+##  What I used
 
 - **Python**, with pandas/numpy for data wrangling and matplotlib/seaborn for plots
 - **scikit-learn** for pretty much everything else: `SimpleImputer`, `OneHotEncoder`, `StandardScaler`, `PCA`, `KMeans`, `AgglomerativeClustering`, and `silhouette_score`
@@ -71,7 +71,7 @@ Each row is one customer. Here's what's in there:
 
 ---
 
-## 🔄 How I approached it
+##  How I approached it
 
 **1. Loaded the data and had a look around**
 Read in `smartcart_customers.csv`, checked the shape, checked for missing values.
@@ -117,7 +117,7 @@ Looked at cluster sizes, plotted Income against Total Spending colored by cluste
 
 ---
 
-## 🎯 So who are SmartCart's customers, really?
+##  So who are SmartCart's customers, really?
 
 Four fairly distinct groups came out of this:
 
@@ -134,7 +134,7 @@ If SmartCart only has budget to focus on one group, it's **Cluster 3** — they 
 
 ---
 
-## 📂 What's in this repo
+##  What's in this repo
 
 ```
 smartcart-clustering-system/
@@ -146,7 +146,7 @@ smartcart-clustering-system/
 
 ---
 
-## 🚀 Running it yourself
+##  Running it yourself
 
 ```bash
 # grab the repo
@@ -162,7 +162,7 @@ jupyter notebook customer_segmentation.ipynb
 
 ---
 
-## ✅ What came out of this
+##  What came out of this
 
 - Went from "everyone gets the same marketing" to **4 distinct, data-backed customer segments**
 - Found the segment worth prioritizing (Cluster 3) — high spenders who actually respond to campaigns
