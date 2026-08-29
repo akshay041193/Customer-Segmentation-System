@@ -135,6 +135,9 @@ If SmartCart only has budget to focus on one group, it's **Cluster 3** — they 
 
 > **Note on clustering validation:** cluster selection (K=4) was confirmed quantitatively via the elbow method and silhouette score sweep across K=2–10. The final choice between KMeans and Agglomerative Clustering at K=4 was made by visual inspection of cluster separation in 3D PCA space rather than a printed silhouette score comparison — a good next step would be to add `silhouette_score(X_pca, agglo_labels)` alongside the KMeans equivalent to quantify that choice numerically.
 
+<img width="594" height="590" alt="image" src="https://github.com/user-attachments/assets/365aae01-6013-4818-8e3f-290648ff0ee7" />
+
+
 ---
 
 ##  What's in this repo
