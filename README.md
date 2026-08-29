@@ -116,21 +116,24 @@ Tried both KMeans and Agglomerative Clustering (Ward linkage), both with 4 clust
 Looked at cluster sizes, plotted Income against Total Spending colored by cluster, and pulled the mean of every feature per cluster to build a real picture of who's in each group.
 
 ---
+## Results
 
-##  So who are SmartCart's customers, really?
+## So who are SmartCart's customers, really?
 
-Four fairly distinct groups came out of this:
+Four fairly distinct groups came out of the final Agglomerative Clustering (values below are the actual per-cluster averages from the notebook):
 
-| Cluster | Who they are | Income | Spending | What stands out |
-|---|---|---|---|---|
-| **0** | Married families, watching their budget | ~$40k | ~$220 | Most kids on average, visits the site a lot but rarely buys, barely responds to campaigns |
-| **1** | Married, well-off, and loyal | ~$73k | ~$1,237 | Buys straight through catalog/store, doesn't browse much, been around the longest |
-| **2** | Single, and careful with money | ~$37k | ~$166 | Visits the site more than anyone, but converts the least |
-| **3** | Single, high earners, and SmartCart's best audience | ~$71k | ~$1,190 | Buys via catalog/store, and responds to campaigns way more than anyone else (~32%) |
+| Cluster | Who they are | Income | Total Spending | Web Visits/Month | Catalog Purchases | Store Purchases | Campaign Response | Avg. Age |
+|---|---|---|---|---|---|---|---|---|
+| **0** | Married families, watching their budget | $39,681 | $222 | 6.3 | 1.0 | 4.1 | 7.6% | 55.7 |
+| **1** | Married, well-off, and loyal | $72,808 | $1,237 | 3.6 | 5.5 | 8.7 | 16.7% | 59.5 |
+| **2** | Single, and careful with money | $36,960 | $166 | 6.7 | 0.8 | 3.6 | 14.2% | 55.7 |
+| **3** | Single, high earners, and SmartCart's best audience | $70,723 | $1,190 | 3.7 | 5.0 | 8.4 | **32.0%** | 58.9 |
 
-**The pattern here is pretty clean:** income basically decides how much someone spends, and whether someone's married or single splits the four groups almost perfectly. The two wealthier clusters (1 and 3) skip the browsing and buy directly — while the two lower-income clusters (0 and 2) spend a lot of time on the site without much to show for it.
+**The pattern here is pretty clean:** income basically decides how much someone spends, and whether someone's married or single splits the four groups almost perfectly. The two wealthier clusters (1 and 3) skip the browsing and buy directly through catalog/store — while the two lower-income clusters (0 and 2) visit the website nearly twice as often but spend far less.
 
-If SmartCart only has budget to focus on one group, it's **Cluster 3** — they already spend well and they're by far the most likely to respond to a campaign.
+If SmartCart only has budget to focus on one group, it's **Cluster 3** — they already spend well (~$1,190/year) and respond to marketing campaigns at roughly **2–4x the rate** of every other cluster (32.0% vs 7.6–16.7%).
+
+> **Note on clustering validation:** cluster selection (K=4) was confirmed quantitatively via the elbow method and silhouette score sweep across K=2–10. The final choice between KMeans and Agglomerative Clustering at K=4 was made by visual inspection of cluster separation in 3D PCA space rather than a printed silhouette score comparison — a good next step would be to add `silhouette_score(X_pca, agglo_labels)` alongside the KMeans equivalent to quantify that choice numerically.
 
 ---
 
